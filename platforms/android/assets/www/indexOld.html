@@ -1,0 +1,1005 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Encoral Claim System</title>
+
+    <link href="ionic/css/ionic.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/input.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/segment.css">
+    <link rel="stylesheet" href="font-awesome-4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/accordion.min.css">
+    <link rel="stylesheet" href="css/table.min.css">
+
+    <script src="cordova.js"></script>
+    <script src="ionic/js/ionic.bundle.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/accordion.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/chart.js"></script>
+
+</head>
+<style>
+body {
+    cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+.slider {
+    height: 100%;
+}
+.slider-slide {
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+}
+
+#logo {
+    margin: 30px 0px;
+}
+
+#list {
+    width: 170px;
+    margin: 30px auto;
+    font-size: 20px;
+}
+#list ol {
+    margin-top: 30px;
+}
+#list ol li {
+    text-align: left;
+    list-style: decimal;
+    margin: 10px 0px;
+}
+
+canvas {
+    width: 100% !important;
+    max-width: 1000px;
+    height: auto !important;
+
+}
+.but-mohon {
+    background: #E39600;
+    color:white;
+}
+.but-lulus {
+    background: #F0BE41;
+    color:white;
+}
+
+.but-expired {
+    background: #B9293B;
+    color:white;
+}
+
+.post-avatar {
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.post-category {
+    margin: 0 0.1em;
+    padding: 0.3em 1em;
+    color: #fff;
+    background: #999;
+    font-size: 80%;
+}
+
+.profile {
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.profile h1 {
+    color: white;
+    text-shadow: 0 2px 5px black;
+}
+
+.profilebg {
+    background-image: url('bg.png');
+    background-size: cover;
+    height: 14em;
+    display: table;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width:100%;
+}
+
+.pure-button .fa{
+    text-shadow: 0 2px 2px rgb(155, 155, 155);
+}
+
+.badge {
+    width: 20px;
+    background-color: rgb(255, 100, 100);
+    height: 20px;
+    padding: 4px;
+    border-radius: 10px;
+    position: absolute;
+    right: 49px;
+    margin-right: 20px;
+}
+
+#headlogin {
+    text-align: center;
+    background-color:none;
+    /*height: 10px;*/
+    padding: 10px;
+    top: 0px;
+}
+#loginfooter {
+    text-align: center;
+    font-size: 10px;
+    bottom: 0;
+    right: 0px; left: 0px;
+}
+#loginfooter p {
+    font-size: 10px;
+}
+#loginarea {
+    text-align: center;
+    min-height: 1em;
+    padding-top: 100px;
+}
+.input-group-addon {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1;
+    color: #555555;
+    text-align: center;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+.input-grouping .form-control {
+    display: table-cell;
+}
+.input-group-addon, .input-group-btn, .input-group .form-control {
+    display: table-cell;
+}
+.input-group-addon:first-child {
+    border-right: 0;
+}
+.input-grouping .form-control:last-child {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.input-grouping .form-control {
+    position: relative;
+    z-index: 2;
+    float: left;
+    margin-bottom: 0;
+}
+.input-grouping {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 90%;
+    margin: auto;
+    max-width: 400px;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555555;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.form-control:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form-control::-moz-placeholder {
+    color: #999999;
+    opacity: 1;
+}
+.form-control:-ms-input-placeholder {
+    color: #999999;
+}
+.form-control::-webkit-input-placeholder {
+    color: #999999;
+}
+.form-control[disabled],
+.form-control[readonly],
+fieldset[disabled] .form-control {
+    cursor: not-allowed;
+    background-color: #eeeeee;
+    opacity: 1;
+}
+.input-group-addon:first-child {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.bayang {
+    -webkit-box-shadow: 0 8px 8px -6px #ccc;
+    -moz-box-shadow: 0 8px 8px -6px #ccc;
+    box-shadow: 0 8px 8px -6px #ccc;
+}
+
+.leavedate .time {
+    color:#BAB8B8;
+}
+
+#loginarea .input input {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.loginversion {
+    color: white;
+    text-shadow: 0 2px 2px #575757;
+}
+.list .item h4 {
+    color: rgb(133, 105, 142);
+}
+
+.frontbutton .button{
+    padding-top: 20px;
+}
+
+.list .item.item-accordion {
+    line-height: 38px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: 0.09s all linear;
+}
+.list .item.item-accordion.ng-hide {
+    line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+    display: block !important;
+}
+
+.ui.label {
+  background-color: darkgray;
+  border-radius: 10px;
+  padding: 5px 10px 5px 10px;
+  font-size: 13px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.number {
+    position: absolute;
+    top: 15px;
+    left: 40px;
+    line-height: 100px;
+    color: #fff;
+}
+.details{
+    position: absolute;
+    top: 19px;
+    left: 85px;
+    line-height: 69px;
+    font-size: 12px;
+}
+
+.number * {
+    line-height: 72px;
+    color: white;
+}
+</style>
+
+<script>
+$.noConflict();
+var host = 'http://192.168.3.231/corrad/fgvh';
+var API_URL = host + "/api_generator.php?api_name=";
+
+    angular.module('ionicApp', ['ionic'])
+    .run(function($ionicPlatform) {
+        $ionicPlatform.ready(function() {
+            // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+            // for form inputs)
+            if (window.cordova && window.cordova.plugins.Keyboard) {
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+                cordova.plugins.Keyboard.disableScroll(true);
+                alert('keyboard warrior');
+            }
+            if(window.StatusBar) {
+                // Set the statusbar to use the default style, tweak this to
+                // remove the status bar on iOS or change it to use white instead of dark colors.
+                StatusBar.styleLightContent();
+            }
+        });
+    })
+
+    .config(function($stateProvider, $urlRouterProvider) {
+
+        $stateProvider
+        .state('login', {
+            url: '/',
+            templateUrl: 'templates/login.html',
+            controller: 'LoginCtrl'
+        })
+        .state('intro', {
+            url: '/intro/:msg',
+            templateUrl: 'templates/intro.html',
+            controller: 'IntroCtrl'
+        })
+        .state('vendor', {
+            url: '/vendor/:customer_id',
+            templateUrl: 'templates/vendor.html',
+            controller: 'VendorMain'
+        })
+        .state('companyList', {
+            url: '/companylist/:type/:keyword',
+            templateUrl: 'templates/companylist.html',
+            controller: 'CompanyList'
+        })
+        .state('companyDetail', {
+            url: '/companydetail/:customer_id',
+            templateUrl: 'templates/companydetail.html',
+            controller: 'CompanyDetail'
+        });
+
+        $urlRouterProvider.otherwise("/");
+
+    })
+
+    .controller('IntroCtrl', function($scope, $state, $ionicSlideBoxDelegate, $http, $stateParams) {
+
+        // Called to navigate to the main app
+        $scope.gotoCompanyList = function(page) {
+            $state.go('companyList', {type:page, keyword:null});
+        };
+        $scope.next = function() {
+            $ionicSlideBoxDelegate.next();
+        };
+        $scope.previous = function() {
+            $ionicSlideBoxDelegate.previous();
+        };
+        $scope.searchForm = function(search) {
+            $state.go('companyList', {type:"search", keyword:search.keyword});
+        };
+
+        $http.get(API_URL+'API_GET_SUBMISSION_BAR').then(function(resp) {
+            generateGraphLine(resp.data);
+        }, function(err) {
+        });
+
+        $http.get(API_URL+'API_GET_SUBMISSION_PIE').then(function(resp) {
+            generateGraphPie(resp.data);
+        }, function(err) {
+        });
+
+        $http.get(API_URL+'API_GET_SUBMISSION_LINE').then(function(resp) {
+            generateGraphBar(resp.data);
+        }, function(err) {
+        });
+
+        // Called each time the slide changes
+        $scope.slideChanged = function(index) {
+            $scope.slideIndex = index;
+        };
+    })
+
+    .controller('CompanyList', function($scope, $timeout, $http, $state, $ionicPopup, $stateParams) {
+        console.log('CompanyList');
+
+        $scope.toCompanyDetail = function(id){
+            $state.go('companyDetail', {customer_id:id});
+        }
+
+        $scope.companylist = {
+            title: generateTitle($stateParams.type),
+            keywordtext:$stateParams.keyword?$stateParams.keyword:null
+        };
+
+        var parameter = {
+            status_code:"new", //status_code:$stateParams.type?$stateParams.type:'',
+            keyword:$stateParams.keyword?$stateParams.keyword:''
+        };
+
+        $http.get(API_URL+'API_GET_COMPANY', {params: parameter}).then(function(resp) {
+            $scope.companies =  resp.data;
+        }, function(err) {
+        });
+
+        $scope.showConfirm = function() {
+            var confirmPopup = $ionicPopup.confirm({
+                title: 'Luluskan Permohonan',
+                template: 'Anda pasti hendak luluskan permohonan ini?'
+            });
+            confirmPopup.then(function(res) {
+                if(res) {
+                    var str = '';
+                    for(var i=0;i<$scope.companies.length;i++)
+                    {
+                      if($scope.companies[i].checked)
+                      {
+                        str=str+'&customer_id[]='+$scope.companies[i].checked;
+                      }
+                    }
+
+                    $http.get(API_URL+'API_UPDATE_APPROVE_CUSTOMER'+str).then(function(resp) {
+                      $state.go('intro', {msg:"approved"});
+                    }, function(err) {
+                    });
+
+                } else {
+                    console.log('Tidak diteruskan');
+                }
+            });
+        };
+    })
+    .controller('CompanyDetail', function($scope, $state, $http, $stateParams) {
+        console.log('CompanyDetail');
+
+        jQuery('.ui.accordion').accordion();
+
+        $http.get(API_URL+'API_GET_COMPANYDETAIL', {params: {customer_id:$stateParams.customer_id}}).then(function(resp) {
+            $scope.companydetail =  resp.data;
+        }, function(err) {
+        });
+    })
+    .controller('VendorMain', function($scope, $state, $http, $stateParams) {
+        console.log('VendorMain');
+
+        $http.get(API_URL+'API_GET_VENDOR_INFO', {params: {customer_id:$stateParams.customer_id}}).then(function(resp) {
+            $scope.user =  resp.data;
+        }, function(err) {
+        });
+
+        $scope.toCompanyPage = function(){
+            $state.go('companyDetail', {customer_id:$stateParams.customer_id});
+        }
+    })
+
+    .controller('LoginCtrl', function($scope, $state) {
+        console.log('LoginCtrl');
+
+        //$scope.barhide = false;
+
+        $scope.toLogin = function(login){
+            if(login.userid=='fauziah')
+                $state.go('vendor', {customer_id:23});
+            else if(login.userid=='husna')
+                $state.go('vendor', {customer_id:26});
+            else if(login.userid=='hafiz')
+                $state.go('vendor', {customer_id:36});
+            else if(login.userid=='johan')
+                $state.go('vendor', {customer_id:47});
+            else if(login.userid=='nazri')
+                $state.go('vendor', {customer_id:50});
+            else
+                $state.go('intro');
+        }
+    })
+    .factory('HelperService', function () {
+        return {
+            companylist: {
+                title: getURLParameter(0)
+            }
+        }
+    });
+
+
+function generateTitle(pr)
+{
+    //var pr = getURLParameter(0);
+
+    if(pr=="new")
+    {
+        return "Permohonan Baru";
+    }
+    else if(pr=="renew")
+    {
+        return "Pembaharuan";
+    }
+    else if(pr=="expired")
+    {
+        return "Permohonan Luput";
+    }
+    else if(pr=="search")
+    {
+        return "Carian";
+    }
+}
+function getURLParameter(index) {
+    //return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
+    var hash = window.location.hash;
+    var string =  hash.split('?')[1];
+
+    return string.split('/')[index];
+}
+function generateGraphLine(info)
+{
+    var options = {
+        responsive:true,
+
+        //String - A legend template
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+
+    };
+
+    var label = [];
+    var datum = [];
+
+    for(var i=0; i<info.length; i++)
+    {
+        label.push(info[i].MONTH);
+        datum.push(parseFloat(info[i].COUNTCUSTOMER));
+    }
+
+    var data = {
+        labels: label,
+        datasets:
+        [{
+            label: "Pendaftaran Vendor",
+            fillColor: "#3CB3C7",
+            strokeColor: "white",
+            data: datum
+        }]
+    };
+
+    var myBarChart = new Chart(jQuery('#myChart').get(0).getContext("2d")).Line(data, {animation : false});
+}
+
+function generateGraphBar(info)
+{
+    var options = {
+        responsive:true,
+        scaleSteps: 1,
+        scaleStartValue: 0,
+        //String - A legend template
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+
+    };
+
+    var label = [];
+    var datum = [];
+
+    for(var i=0; i<info.length; i++)
+    {
+        label.push(info[i].YEAR);
+        datum.push(parseInt(info[i].YEARCOUNT));
+    }
+
+    var data = {
+        labels: label,
+        datasets:
+        [{
+            label: "Pendaftaran Vendor",
+            fillColor: "#3CB3C7",
+            strokeColor: "white",
+            data: datum
+        }]
+    };
+
+    var myOtherChart = new Chart(jQuery('#myOtherChart').get(0).getContext("2d")).Bar(data, {animation : false});
+}
+
+function generateGraphPie(info)
+{
+    var data = [];
+    var datum = [];
+    var color = ["#F7464A", "#46BFBD", "#FDB45C", "#F7464A", "#46BFBD", "#FDB45C", "#F7464A", "#46BFBD", "#FDB45C"];
+
+    for(var i=0; i<info.length; i++)
+    {
+        var datum = {
+            value: info[i].YEAR_COUNT*1,
+            color:color[i],
+            highlight: "#FF5A5E",
+            title: info[i].NEGERI
+        };
+
+        data.push(datum);
+    }
+    var myPieChart = new Chart(jQuery('#myPieChart').get(0).getContext("2d")).Pie(data, {
+        animationSteps: 100,
+        animationEasing: 'easeInOutQuart',
+        pointDotRadius : 60,
+        animation : false,
+        inGraphDataShow : true
+    });
+}
+
+</script>
+<body ng-app="ionicApp">
+
+    <ion-nav-bar class="bar-energized" ng-hide="barhide">
+      <ion-nav-back-button class="button-clear">
+        <i class="fa fa-chevron-left"></i> Back
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <ion-nav-view></ion-nav-view>
+    <script id="templates/intro.html" type="text/ng-template">
+        <ion-view hide-back-button="true" view-title="Encoral Claim System">
+            <ion-content class="padding">
+                <div class="list list-inset">
+                    <form ng-submit="searchForm(search)">
+                        <label class="item item-input">
+                            <i class="fa fa-search fa-fw"></i>
+                            <input type="text" placeholder="Carian Pemohon" ng-model="search.keyword">
+                        </label>
+                    </form>
+                </div>
+
+                <div class="button-bar frontbutton">
+                    <a class="button button-positive" ng-click="gotoCompanyList('new')">
+                        <i class="fa fa-file-o fa-2x"></i>
+                        <p>Baru</p>
+                    </a>
+                    <a class="button button-energized" ng-click="gotoCompanyList('renew')">
+                        <i class="fa fa-refresh fa-2x"></i>
+                        <p>Renew</p>
+                    </a>
+                    <a class="button button-assertive"  ng-click="gotoCompanyList('expired')">
+                        <i class="fa fa-warning fa-2x"></i>
+                        <p>Luput</p>
+                    </a>
+                </div>
+                <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager="true" style="height:400px">
+                    <ion-slide>
+                        <div class="card">
+                            <div class="item item-divider">
+                                Permohonan Tahun ini
+                                <i class="fa fa-chevron-right" style="float:right"></i>
+                            </div>
+                            <div class="item item-text-wrap">
+                                <canvas id="myChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="card">
+                            <div class="item item-divider">
+                            <i class="fa fa-chevron-left" style="float:left"></i>
+                            Statistik Permohonan Tahunan (Negeri)
+                            <i class="fa fa-chevron-right" style="float:right"></i>
+                            </div>
+                            <div class="item item-text-wrap">
+                                <canvas id="myPieChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </ion-slide>
+                    <ion-slide>
+                        <div class="card">
+                            <div class="item item-divider">
+                            <i class="fa fa-chevron-left" style="float:left"></i>
+                            Permohonan Ditolak 3 Tahun
+                            </div>
+                            <div class="item item-text-wrap">
+                                <canvas id="myOtherChart" width="400" height="200"></canvas>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+                <div align=center class="">
+                <a href="#login" >Log Keluar</a><br/>
+                <span id="">eVRS (Version <span id="appversion"></span>)</span>
+                <br/>
+                Felda Global Ventures<br/>
+                All rights reserved.
+                </div>
+            </ion-content>
+        </ion-view>
+
+    </script>
+    <script id="templates/login.html" type="text/ng-template" >
+        <ion-view hide-back-button="true" view-title="" hide-nav-bar="true">
+            <ion-content class="padding" style="background-image:url('login-bg.jpg');background-size:cover;">
+                <br><br><br>
+                <div id="headlogin" style="margin-left: auto;margin-right:auto; width: 150px;">
+                    <img src="img/title_enc2.png" width=150px style="border:none;" />
+                </div>
+                <div id="loginarea">
+                    <form id="form-login">
+					<h3 style="color:white;">Encoral Claim System</h3>
+                        <p style="color:white;">Please key in your user ID and password</p>
+                        <br>
+                        <div class="ui left icon input" style="margin-top:10px;width:50%;">
+                            <input type="text" placeholder="User ID" ng-model="login.userid">
+                            <i class="fa fa-user icon"></i>
+                        </div>
+                        <br>
+                        <div class="ui left icon input" style="margin-top:10px;width:50%;">
+                            <input type="password" placeholder="Katalaluan" ng-model="login.password">
+                            <i class="icon fa fa-key"></i>
+                        </div>
+                        <br>
+                        <a class="button button-dark" id="loginbutton" style="width:50%;margin-top:20px;font-size: 18px;" ng-click="toLogin(login)">Login</a>
+                        <div class="error-message" style="font-size:14px; color:red; font-face:verdana;"></div>
+                    </form>
+                    <br><br><br>
+                    <div align=center class="loginversion">
+                        <span id="">&copy; Copyright 1993-2015<br>eNCoral Digital Solutions Sdn. Bhd.(Version <span id="appversion">0.5b</span>)</span>.<br> All rights reserved.
+                    </ion-content>
+                </ion-view>
+                <br/>
+            </div>
+        </div>
+    </script>
+    <script id="templates/companylist.html" type="text/ng-template">
+        <ion-view view-title="Encoral Claim System">
+        <ion-nav-buttons side="secondary">
+        <button class="button button-clear" ng-click="showConfirm()">
+        Luluskan
+        </button>
+        </ion-nav-buttons>
+        <ion-content class="padding">
+        <h3 id="list_title">{{companylist.title}}</h3>
+        <p ng-show="companylist.keywordtext">Hasil carian "{{companylist.keywordtext}}"...</p>
+
+        <div class="list card" ng-repeat="company in companies | orderBy : CUSTOMER_ID">
+            <div class="item item-avatar">
+            <img src="http://robohash.org/fgvh_{{company.CUSTOMER_ID}}" ng-click="toCompanyDetail({{company.CUSTOMER_ID}})">
+            <div style="float:right">
+            <label class="toggle">
+            <input type="checkbox"  ng-model="company.checked" ng-checked="company.checked" ng-true-value="{{company.CUSTOMER_ID}}">
+            <div class="track">
+            <div class="handle"></div>
+            </div>
+            </label>
+            </div>
+            <h2>{{company.COMPANY_NAME}}</h2>
+            <p>{{company.COMPANY_SEC_LICENSE_NO}}</p>
+
+            </div>
+            <div class="item item-body" ng-click="toCompanyDetail({{company.CUSTOMER_ID}})">
+            <i class="fa fa-chevron-right" style="float:right"></i>
+            <h4>{{company.CUSTOMER_NAME}}</h3>
+            <p class="subdued" ng-show="company.REGISTRATION_DATE" ><strong>Application</strong> {{company.REGISTRATION_DATE}}</p>
+            <p class="subdued" ng-show="company.SUBMISSION_DATE" ><strong>Submission</strong> {{company.SUBMISSION_DATE}}</p>
+            <p class="subdued" ng-show="company.CONFIRMED_DATE" ><strong>Comfirmed</strong> {{company.CONFIRMED_DATE}}</p>
+            </p>
+            </div>
+
+        </div>
+
+        </ion-content>
+        </ion-view>
+    </script>
+    <script id="templates/vendor.html" type="text/ng-template">
+    <ion-view view-title="FGV eVRS">
+    <ion-content class="padding">
+    <a class="button button-full button-positive" ng-click="toCompanyPage({{user.customer_id}})">Status Permohonan</a>
+    <h4>Registration Flow</h4>
+    <div class="item">
+    <img src="img/aliran.png"/>
+    <div class="number">
+    <h1>1</h1>
+    <h1>2</h1>
+    <h1>3</h1>
+    <h1>4</h1>
+    <h1>5</h1>
+    </div>
+    <div class="details">
+    <p><b>Application : </b>16/03/2014 - Send registration</p>
+    <p><b>Verification : </b>19/03/2014 - Accepted & Proces for confirmation</p>
+    <p><b>Approval level 1 : </b>19/03/2014 - </p>
+    <p><b>Approval level 2 :</b>  - </p>
+    <p><b>Certificate ready : </b></p>
+    </div>
+    </div>
+    <h4>Registration form check list</h4>
+    <ion-checkbox ng-model="user.info_sijil" ng-true-value="'1'" ng-false-value="'0'" readonly>Certificate</ion-checkbox>
+    <ion-checkbox ng-model="user.info_km" ng-true-value="'1'" ng-false-value="'0'">Equity / Capital</ion-checkbox>
+    <ion-checkbox ng-model="user.info_bks" ng-true-value="'1'" ng-false-value="'0'">Capital / Equity / Owner holder</ion-checkbox>
+    <ion-checkbox ng-model="user.info_akpm" ng-true-value="'1'" ng-false-value="'0'">No of company staff</ion-checkbox>
+    <ion-checkbox ng-model="user.info_kp" ng-true-value="'1'" ng-false-value="'0'">Family holding in capital / Equity / owner work in Felda group</ion-checkbox>
+    <ion-checkbox ng-model="user.info_kki" ng-true-value="'1'" ng-false-value="'0'">Banking facilities</ion-checkbox>
+    <ion-checkbox ng-model="user.info_kkp" ng-true-value="'1'" ng-false-value="'0'">Financial facilities without Collateral</ion-checkbox>
+    <ion-checkbox ng-model="user.info_bk" ng-true-value="'1'" ng-false-value="'0'">List of work last 3 years</ion-checkbox>
+    <ion-checkbox ng-model="user.info_sk" ng-true-value="'1'" ng-false-value="'0'">Yearly work experiences</ion-checkbox>
+    <ion-checkbox ng-model="user.info_pkt" ng-true-value="'1'" ng-false-value="'0'">Business coverage</ion-checkbox>
+    <ion-checkbox ng-model="user.info_llp" ng-true-value="'1'" ng-false-value="'0'">Preference interview location</ion-checkbox>
+    <ion-checkbox ng-model="user.info_ltd" ng-true-value="'1'" ng-false-value="'0'">Integrity declaration</ion-checkbox>
+    <ion-checkbox ng-model="user.info_ai" ng-true-value="'1'" ng-false-value="'0'">Declaration</ion-checkbox>
+    </ion-content>
+    </ion-view>
+    </script>
+    <script id="templates/companydetail.html" type="text/ng-template">
+        <ion-view view-title="FGV eVRS">
+        <ion-content class="padding">
+        <div class="item item-avatar">
+            <img src="http://robohash.org/fgvh_{{companydetail.CUSTOMER_ID}}">
+
+            <h2>{{companydetail.COMPANY_NAME}}</h2>
+            <p>{{companydetail.COMPANY_SEC_LICENSE_NO}}</p>
+            <span class="ui label">{{companydetail.STATUS}}</span>
+            </div>
+            <div class="item item-body">
+                <h4>{{companydetail.CUSTOMER_NAME}}</h4>
+                <p class="subdued" ng-show="companydetail.REGISTRATION_DATE" ><strong>Application</strong> {{companydetail.REGISTRATION_DATE}}</p>
+                <p class="subdued" ng-show="companydetail.SUBMISSION_DATE" ><strong>Submission</strong> {{companydetail.SUBMISSION_DATE}}</p>
+                <p class="subdued" ng-show="companydetail.CONFIRMED_DATE" ><strong>Comfirmed</strong> {{companydetail.CONFIRMED_DATE}}</p>
+                </p>
+            </div>
+        </div>
+        <div class="ui styled accordion">
+        <div class="active title">
+        <i class="dropdown icon"></i>
+        <i class="fa fa-user fa-lg" style="color: #e3000b;"></i> Latar Belakang
+        </div>
+        <div class="active content">
+        <table class="ui definition table unstackable">
+        <tbody>
+        <tr>
+        <td class="">Jenis Syarikat</td>
+        <td>{{companydetail.COMPANY_TYPE_CODE}}</td>
+        </tr>
+        <tr>
+        <td>Nama Syarikat</td>
+        <td>{{companydetail.COMPANY_TYPE_CODE}}</td>
+        </tr>
+        <tr>
+        <td>No Pendaftaran GST</td>
+        <td>{{companydetail.GST_NO}}</td>
+        </tr>
+        <tr>
+        <td>Tarikh Pendaftaran GST</td>
+        <td></td>
+        </tr>
+        <tr>
+        <td>Tarikh Penubuhan</td>
+        <td>{{companydetail.REGISTRATION_DATE}}</td>
+        </tr>
+        <tr>
+        <td>Alamat Berdaftar</td>
+        <td>{{companydetail.ADDRESS}}</td>
+        </tr>
+        <tr>
+        <td>Negeri</td>
+        <td>{{companydetail.STATUE_CODE}}</td>
+        </tr>
+        <tr>
+        <td>No telefon</td>
+        <td>{{companydetail.NO_TEL}}</td>
+        </tr>
+        <tr>
+        <td>Email</td>
+        <td>{{companydetail.EMAIL}}</td>
+        </tr>
+        </tbody>
+        </table>
+    </div>
+        <div class="title">
+            <i class="dropdown icon"></i>
+            <i class="fa fa-file-o fa-lg" style="color: #e3000b;"></i> Sijil
+        </div>
+        <div class="content">
+            <div ng-repeat="certificate in companydetail.CERT_DATA ">
+                <h4>{{certificate.CERTIFICATE_NO}}</h4>
+                <table class="ui definition table unstackable">
+                    <tbody>
+                        <tr>
+                            <td class="">Tarikh Daftar</td>
+                            <td>{{certificate.REGISTRATION_DATE}}</td>
+                        </tr>
+                        <tr>
+                            <td class="">No Sijil</td>
+                            <td>{{certificate.CERTIFICATE_NO}}</td>
+                        </tr>
+                        <tr>
+                            <td class="">Jenis Sijil</td>
+                            <td>{{certificate.DESCRIPTION_1}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="title">
+            <i class="dropdown icon"></i>
+            <i class="fa fa-barcode fa-lg" style="color: #e3000b;"></i> Kedudukan Modal
+        </div>
+        <div class="content">
+        <h4>Kedudukan Modal</h4>
+        <table class="ui definition table unstackable">
+        <tbody>
+        <tr>
+        <td class="">Modal Berbayar</td>
+        <td>{{companydetail.EQUITY_DATA.PAID_UP_CAPITAL}}</td>
+        </tr>
+        <tr>
+        <td class="">Modal Dibenarkan</td>
+        <td>{{companydetail.EQUITY_DATA.AUTHORIZED_CAPITAL}}</td>
+        </tr>
+        </tbody>
+        </table>
+        <h4>Pembahagian Modal / Ekuiti</h4>
+        <table class="ui definition table unstackable">
+        <tbody>
+        <tr>
+        <td class="">Bumiputera</td>
+        <td>{{companydetail.EQUITY_DATA.BUMIPUTRA_EQUITY}}</td>
+        <td>{{companydetail.EQUITY_DATA.PERCENT_BUMIPUTRA}}%</td>
+        </tr>
+        <tr>
+        <td class="">Bukan Bumiputera</td>
+        <td>{{companydetail.EQUITY_DATA.NON_BUMIPUTRA_EQUITY}}</td>
+        <td>{{companydetail.EQUITY_DATA.PERCENT_NON_BUMIPUTRA}}%</td>
+        </tr>
+        <tr>
+        <td class="">Bukan Warganegara</td>
+        <td>{{companydetail.EQUITY_DATA.NON_CITIZEN_EQUITY}}</td>
+        <td>{{companydetail.EQUITY_DATA.PERCENT_NON_CITIZEN}}%</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        <div class="title">
+            <i class="dropdown icon"></i>
+            <i class="fa fa-smile-o fa-lg" style="color: #e3000b;"></i> Bilangan Kakitangan Syarikat
+        </div>
+        <div class="content">
+        <table class="ui definition table unstackable">
+        <tbody>
+        <tr>
+        <td class="">Bumiputera</td>
+        <td>{{companydetail.STAFF_DATA.BUMIPUTRA_STAFF}}</td>
+        <td>{{companydetail.STAFF_DATA.PERCENT_BUMIPUTRA}}%</td>
+        </tr>
+        <tr>
+        <td class="">Bukan Bumiputera</td>
+        <td>{{companydetail.STAFF_DATA.NON_BUMIPUTRA_STAFF}}</td>
+        <td>{{companydetail.STAFF_DATA.PERCENT_NON_BUMIPUTRA}}%</td>
+        </tr>
+        <tr>
+        <td class="">Bukan Warganegara</td>
+        <td>{{companydetail.STAFF_DATA.NON_CITIZEN_STAFF}}</td>
+        <td>{{companydetail.STAFF_DATA.PERCENT_NON_CITIZEN}}%</td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        <div class="title">
+            <i class="dropdown icon"></i>
+            <i class="fa fa-money fa-lg" style="color: #e3000b;"></i> Perincian Pemegang Modal
+        </div>
+        <div class="content">
+            <div ng-repeat="equity in companydetail.EQUITY_DETAIL | orderBy: NAME ">
+                <h4>{{equity.CERTIFICATE_NO}}</h4>
+                <table class="ui definition table unstackable">
+                    <tbody>
+                    <tr>
+                        <td class="">No Pendaftaran</td>
+                        <td>{{equity.REGISTRATION_NO}}</td>
+                    </tr>
+                    <tr>
+                        <td class="">Nama</td>
+                        <td>{{equity.NAME}}</td>
+                    </tr>
+                    <tr>
+                        <td class="">Peratus Hakmilik</td>
+                        <td>{{equity.OWNERSHIP_PERCENTAGE | number}}%</td>
+                    </tr>
+                    <tr>
+                        <td class="">No K/P</td>
+                        <td>{{equity.IC_NO}}</td>
+                    </tr>
+                    <tr>
+                        <td class="">No passport</td>
+                        <td>{{equity.PASSPORT_NO}}</td>
+                    </tr>
+                    <tr>
+                        <td class="">Status Peneroka</td>
+                        <td>{{equity.STATUS_PENEROKA_CODE}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+        </ion-content>
+        </ion-view>
+    </script>
+</body>
+</html>
