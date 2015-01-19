@@ -1,4 +1,46 @@
 /* Empty. Add your own CSS if you like */
+.bubble 
+{
+position: relative;
+width: 255px;
+height: 120px;
+padding: 10px;
+background: #41CDF5;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+border: #41CDF5 solid 8px;
+}
+
+.bubble:after 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 8px 15px 8px 0;
+border-color: transparent #41CDF5;
+display: block;
+width: 0;
+z-index: 1;
+margin-top: -8px;
+left: -15px;
+top: 31%;
+}
+
+.bubble:before 
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 22px 15px 0;
+border-color: transparent #41CDF5;
+display: block;
+width: 0;
+z-index: 0;
+margin-top: -15px;
+left: -30px;
+top: 31%;
+}
 
 .center{
     display: -webkit-box;
