@@ -4,7 +4,6 @@ Each tab's child <ion-nav-view> directive will have its own
 navigation history that also transitions its views in and out.
 -->
 <ion-side-menus>
-
     <ion-pane ion-side-menu-content>
         <ion-nav-bar class="bar-stable">
             <ion-nav-back-button class="button-clear"><i class="icon ion-chevron-left"></i> Back</ion-nav-back-button>
@@ -25,7 +24,6 @@ navigation history that also transitions its views in and out.
             </ion-tab>
         </ion-tabs>
     </ion-pane>
-
     <ion-side-menu side="right">
         <header class="bar bar-header bar-stable">
             <h1 class="title">Left</h1>
@@ -34,6 +32,9 @@ navigation history that also transitions its views in and out.
             <ion-list>
                 <ion-item nav-clear menu-close href="#/app/search">
                     Settings
+                </ion-item>
+                <ion-item nav-clear menu-close href="#/login">
+                    Logout
                 </ion-item>
                 <ion-item nav-clear menu-close href="#/app/browse">
                     About
