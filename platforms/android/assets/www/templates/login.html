@@ -1,0 +1,18 @@
+<ion-view view-title="Login" name="login-view" hide-nav-bar="true">
+  <ion-content class="padding" style="background-image:url('img/geometric.jpg');  background-size: cover;">
+       <br><br><br>
+                <div id="headlogin" style="margin-left: auto;margin-right:auto; width: 150px;">
+                    <img src="img/icon2.png" width=150px style="border:none;" />
+                </div>
+
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="text" placeholder="Username" ng-model="data.username">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="login()">Login</button>
+  </ion-content>
+</ion-view>
