@@ -30,3 +30,35 @@
     -ms-flex-align: center;
     align-items: center;
 }
+
+.popover{
+
+  height:130px;
+}
+
+.newText {
+  display:block;
+  clear:both;
+  max-width:50%;
+  margin:0 0 1rem 0;
+  padding:0;
+  float:right;
+  border-radius:.75rem;
+  background:#e6e5eb;
+  color:#383641;
+  padding:.6875rem;
+  margin:0;
+}
+
+.oldText {
+  display:block;
+  clear:both;
+  max-width:50%;
+  margin:0 0 1rem 0;
+  padding:0;
+  border-radius:.75rem;
+  background:azure;
+  color:#383641;
+  padding:.6875rem;
+  margin:0;
+}

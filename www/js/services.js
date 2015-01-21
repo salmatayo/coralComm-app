@@ -32,6 +32,7 @@ angular.module('starter.services', [])
     id: 0,
     name: 'Ben Sparrow',
     lastText: 'You on your way?',
+    newText:'yesssss. OTW. Jalan jem tuan!',
     face: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png'
   }, {
     id: 1,

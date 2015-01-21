@@ -52,11 +52,16 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('ChatsCtrl', function($scope, Chats) {
+.controller('ChatsCtrl', function($scope, Chats,  $ionicPopover) {
   $scope.chats = Chats.all();
   $scope.remove = function(chat) {
     Chats.remove(chat);
   }
+  $ionicPopover.fromTemplateUrl('templates/popover.html', {
+    scope: $scope,
+  }).then(function(popover) {
+    $scope.openPopover = popover;
+  });
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

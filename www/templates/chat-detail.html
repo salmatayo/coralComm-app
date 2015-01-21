@@ -6,8 +6,33 @@
 -->
 <ion-view view-title="{{chat.name}}">
   <ion-content class="padding">
-    <p>
+    <p class="oldText">
+      {{chat.lastText}}
+    </p>
+    <p class="newText">
+      {{chat.newText}}
+    </p>
+    <p class="oldText">
+      {{chat.lastText}}
+    </p>
+    <p class="newText">
+      {{chat.newText}}
+    </p>
+    <p class="oldText">
       {{chat.lastText}}
     </p>
   </ion-content>
 </ion-view>
+
+<!-- nak letak chat input and button kat sini.cont esok.
+<ion-footer-bar>
+  <button class="button button-clear icon ion-plus-circled" ng-click="openPopover.show($event)"></button>
+  <div class=" item-input-inset" style="width:100%">
+    <label class="item-input-wrapper">
+
+      <input type="text" placeholder="Search">
+    </label>
+  </div>
+</ion-footer-bar>
+</ion-view>
+-->
