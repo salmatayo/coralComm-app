@@ -78,7 +78,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   .state('contact', {
     url: "/contact",
-    templateUrl: "templates/contact.html"
+    templateUrl: "templates/contact.html",
     controller: 'ContactCtrl'
   });
 
