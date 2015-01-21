@@ -42,6 +42,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     templateUrl: "templates/tabs.html"
   })
 
+
+
   // Each tab has its own nav history stack:
 
   .state('tab.dash', {
@@ -72,7 +74,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         }
       }
 
+  })
+
+  .state('contact', {
+    url: "/contact",
+    templateUrl: "templates/contact.html"
+    controller: 'ContactCtrl'
   });
+
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/login');
