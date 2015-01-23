@@ -50,7 +50,6 @@
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/ionic \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/js \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib \
-/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/login-bg.jpg \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/plugins \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/css/accordion.min.css \
@@ -128,9 +127,9 @@
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/font-awesome-4.2.0/scss/_stacked.scss \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/font-awesome-4.2.0/scss/_variables.scss \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/font-awesome-4.2.0/scss/font-awesome.scss \
-/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/img/aliran.png \
+/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/img/geometric.jpg \
+/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/img/icon2.png \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/img/logo.png \
-/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/img/title_enc2.png \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/ionic/css \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/ionic/fonts \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/ionic/js \
@@ -455,8 +454,10 @@
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www/statusbar.js \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/chat-detail.html \
+/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/contact.html \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/friend-detail.html \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/login.html \
+/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/popover.html \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/tab-account.html \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/tab-chats.html \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/tab-dash.html \
