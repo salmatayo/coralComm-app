@@ -51,6 +51,10 @@ angular.module('starter.controllers', [])
   });
 })
 
+.controller('SlideCtrl', function($scope) {
+  $scope.contactSlide = 1;
+})
+
 
 .controller('ChatsCtrl', function($scope, Chats,  $ionicPopover) {
   $scope.chats = Chats.all();
