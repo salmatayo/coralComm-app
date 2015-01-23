@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.ionicframework.myapp285210;
+package com.encoral.coralcomm;
 
 import android.os.Bundle;
 import org.apache.cordova.*;

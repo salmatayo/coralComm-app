@@ -92,3 +92,8 @@ IOS/www/
 .Trashes
 
 ~$CoralComm.xlsx
+platforms/android/assets/www/
+
+platforms/android/ant-build/build.prop
+
+platforms/android/CordovaLib/ant-build/build.prop

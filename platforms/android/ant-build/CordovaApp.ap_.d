@@ -260,11 +260,9 @@
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/angular-ui-router/src/view.js \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/angular-ui-router/src/viewDirective.js \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/angular-ui-router/src/viewScroll.js \
-/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/ionic/bower.json \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/ionic/css \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/ionic/fonts \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/ionic/js \
-/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/ionic/README.md \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/ionic/scss \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/ionic/version.json \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/lib/ionic/css/ionic.css \
@@ -454,6 +452,7 @@
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www/statusbar.js \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/chat-detail.html \
+/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/contact-new \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/contact.html \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/friend-detail.html \
 /Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/assets/www/templates/login.html \
