@@ -119,4 +119,36 @@ angular.module('starter.services', [])
       return friends[friendId];
     }
   }
+})
+.factory('Task', function() {
+    // Might use a resource here that returns a JSON array
+
+    // Some fake testing data
+    var tasks = [{
+        id: 0,
+        assigner: 'Rosli Amir',
+        name: 'Enjoys drawing things',
+        dateline: '29 October 2015',
+    }, {
+        id: 1,
+        assigner: 'Rosli Amir',
+        name: 'Budget on IT',
+        dateline: '31 October 2015',
+    }, {
+        id: 2,
+        assigner: 'Admin',
+        name: 'Enjoys making dummy data',
+        dateline: '1 November 2015',
+    }];
+
+
+    return {
+        all: function() {
+            return tasks;
+        },
+        get: function(tasksId) {
+            // Simple index lookup
+            return tasks[tasksId];
+        }
+    }
 });

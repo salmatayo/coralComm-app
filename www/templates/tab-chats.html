@@ -1,7 +1,7 @@
 <ion-view view-title="Chats">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats | filter:filterchats" type="item-text-wrap" href="#/tab/chats/{{chat.id}}">
         <img ng-src="{{chat.face}}">
         <h2>{{chat.name}}</h2>
         <p>{{chat.lastText}}</p>
@@ -17,8 +17,7 @@
     <button class="button button-clear icon ion-plus-circled" ng-click="openPopover.show($event)"></button>
     <div class=" item-input-inset" style="width:100%">
       <label class="item-input-wrapper">
-
-        <input type="text" placeholder="Search">
+        <input type="text" placeholder="Search" ng-model="filterchats">
       </label>
     </div>
   </ion-footer-bar>

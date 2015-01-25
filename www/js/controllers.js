@@ -16,12 +16,13 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('DashCtrl', function($scope, $ionicPopover) {
+.controller('DashCtrl', function($scope, $ionicPopover, Task) {
     $ionicPopover.fromTemplateUrl('templates/popover.html', {
         scope: $scope,
     }).then(function(popover) {
         $scope.openPopover = popover;
     });
+    $scope.tasks = Task.all();
 })
 
 .controller('ContactCtrl', function($scope, $ionicModal) {
