@@ -15,6 +15,14 @@ angular.module('starter.controllers', [])
     }
 })
 
+.controller('NewContactCtrl', function($scope) {
+
+})
+
+.controller('GroupCtrl', function($scope) {
+
+})
+
 
 .controller('DashCtrl', function($scope, $ionicPopover, Task) {
     $ionicPopover.fromTemplateUrl('templates/popover.html', {
@@ -31,7 +39,7 @@ angular.module('starter.controllers', [])
   }).then(function(popover) {
     $scope.openPopover = popover;
   });
-  
+
   $ionicModal.fromTemplateUrl('templates/contact.html', {
     scope: $scope,
     animation: 'slide-in-up'
