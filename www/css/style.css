@@ -76,14 +76,6 @@
   font-weight: 300;
 }
 
-.blue {
-  background-color: blue;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-.pink {
-  background-color: pink;
+.userCustom{
+  width:80%;
 }

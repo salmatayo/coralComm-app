@@ -25,7 +25,13 @@ angular.module('starter.controllers', [])
     $scope.tasks = Task.all();
 })
 
-.controller('ContactCtrl', function($scope, $ionicModal) {
+.controller('ContactCtrl', function($scope, $ionicModal, $ionicPopover) {
+  $ionicPopover.fromTemplateUrl('templates/popover.html', {
+    scope: $scope,
+  }).then(function(popover) {
+    $scope.openPopover = popover;
+  });
+  
   $ionicModal.fromTemplateUrl('templates/contact.html', {
     scope: $scope,
     animation: 'slide-in-up'

@@ -1,23 +1,128 @@
+<ion-view view-title="Contacts">
 <ion-slide-box active-slide="contactSlide">
   <ion-slide>
-    <div class="box blue"><h1>BLUE</h1></div>
+    <div class="box blue">
+      <div class="row">
+        <div class="col">
+          <img class="userCustom" src="../img/users/alien.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/shrek.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/chef.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+      </div>
+    </div>
   </ion-slide>
+
   <ion-slide>
-    <div class="box yellow"><h1>YELLOW</h1></div>
+    <div class="box yellow">
+      <div class="row">
+        <div class="col">
+          <img class="userCustom" src="../img/users/elvis-1.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/marvin.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/deadpool.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+      </div>
+    </div>
   </ion-slide>
+
   <ion-slide>
-    <div class="box pink"><h1>PINK</h1></div>
+    <div class="box pink">
+      <div class="row">
+        <div class="col">
+          <img class="userCustom" src="../img/users/girl-hat.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+          </div>
+          <div class="col">
+            <img class="userCustom" src="../img/users/harrypotter.png"><br><br>
+            Group<br>Last Name<br>Date & Time
+          </div>
+          <div class="col">
+            <img class="userCustom" src="../img/users/hitler.png"><br><br>
+            Group<br>Last Name<br>Date & Time
+          </div>
+      </div>
+    </div>
   </ion-slide>
 </ion-slide-box>
 
 <ion-slide-box active-slide="contactGroupSlide">
   <ion-slide>
-    <div class="box blue"><h1>BLUE</h1></div>
+    <div class="box blue">
+      <div class="row">
+        <div class="col">
+          <img class="userCustom" src="../img/users/godfather.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/harleyquinn.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/tinkerbell.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+      </div>
+    </div>
   </ion-slide>
+
   <ion-slide>
-    <div class="box yellow"><h1>YELLOW</h1></div>
+    <div class="box yellow">
+      <div class="row">
+        <div class="col">
+          <img class="userCustom" src="../img/users/mario.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/pikachuy.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/sonic.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+      </div>
+    </div>
   </ion-slide>
+
   <ion-slide>
-    <div class="box pink"><h1>PINK</h1></div>
+    <div class="box pink">
+      <div class="row">
+        <div class="col">
+          <img class="userCustom" src="../img/users/spiderman.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/terminator.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+        <div class="col">
+          <img class="userCustom" src="../img/users/optimus-prime.png"><br><br>
+          Group<br>Last Name<br>Date & Time
+        </div>
+      </div>
+    </div>
   </ion-slide>
 </ion-slide-box>
+</ion-view>
+
+<ion-footer-bar>
+  <button class="button button-clear icon ion-plus-circled" ng-click="openPopover.show($event)"></button>
+  <div class=" item-input-inset" style="width:100%">
+    <label class="item-input-wrapper">
+      <input type="text" placeholder="Search" ng-model="filterchats">
+    </label>
+  </div>
+</ion-footer-bar>

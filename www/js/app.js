@@ -76,10 +76,14 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
   })
 
-  .state('contact', {
+  .state('tab.contact', {
     url: "/contact",
+    views: {
+      'tab-chats': {
     templateUrl: "templates/contact.html",
     controller: 'ContactCtrl'
+  }
+}
   });
 
 
