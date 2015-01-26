@@ -1,2 +1,2 @@
-/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/ant-build/AndroidManifest.xml : \
-/Users/asanrivas/Documents/PhoneGap/coralComm-app/platforms/android/AndroidManifest.xml \
+/Users/salmatayo/myApp/platforms/android/ant-build/AndroidManifest.xml : \
+/Users/salmatayo/myApp/platforms/android/AndroidManifest.xml \

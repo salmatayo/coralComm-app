@@ -1,3 +1,3 @@
 # view AndroidManifest.xml #generated:6
--keep class com.ionicframework.myapp285210.CordovaApp { <init>(...); }
+-keep class com.encoral.coralcomm.CordovaApp { <init>(...); }
 

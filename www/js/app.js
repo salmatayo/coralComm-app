@@ -47,6 +47,12 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     controller: 'GroupCtrl'
   })
 
+  .state('contactinfo', {
+    url: "/contact-info",
+    templateUrl: "templates/contact-info.html",
+    controller: 'ContactInfoCtrl'
+  })
+
   // setup an abstract state for the tabs directive
     .state('tab', {
     url: "/tab",

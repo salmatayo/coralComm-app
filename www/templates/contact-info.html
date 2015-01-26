@@ -1,0 +1,55 @@
+<ion-view view-title="Contact Info">
+
+
+  <ion-content>
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name</span>
+        <input type="text" placeholder="Name">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Email</span>
+        <input type="text" placeholder="Email">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Phone Number</span>
+        <input type="text" placeholder="Phone">
+      </label>
+
+    </div>
+
+    <div>
+      <label class="item item-radio">
+        <div class="item"><h2>Type</h2></div>
+        <ion-radio ng-model="choice" ng-value="'customer'">Customer</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'vendor'">Vendor</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'staff'">Staff</ion-radio>
+      </label>
+    </div>
+
+
+    <ion-list>
+      <a class="item item-icon-left" ui-sref="contactinfo">
+        <i class="icon ion-person"></i>
+        Name 1 ( Group 1, Group 2)
+      </a>
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-person"></i>
+        Name 2 ( Group 1, Group 2)
+      </a>
+      <a class="item item-icon-left" href="#">
+        <i class="icon ion-person"></i>
+        Name 3 ( Group 1, Group 2)
+      </a>
+
+    </ion-list>
+    
+    <div class="item">
+      <button class="button button-calm">
+        Submit
+      </button>
+    </div>
+
+  </ion-content>
+
+</ion-view>

@@ -23,6 +23,9 @@ angular.module('starter.controllers', [])
 
 })
 
+.controller('ContactInfoCtrl', function($scope) {
+
+})
 
 .controller('DashCtrl', function($scope, $ionicPopover, Task) {
     $ionicPopover.fromTemplateUrl('templates/popover.html', {
