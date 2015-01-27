@@ -594,6 +594,7 @@
 /Users/salmatayo/myApp/platforms/android/assets/www/templates/group.html \
 /Users/salmatayo/myApp/platforms/android/assets/www/templates/login.html \
 /Users/salmatayo/myApp/platforms/android/assets/www/templates/popover.html \
+/Users/salmatayo/myApp/platforms/android/assets/www/templates/popoverchats.html \
 /Users/salmatayo/myApp/platforms/android/assets/www/templates/tab-account.html \
 /Users/salmatayo/myApp/platforms/android/assets/www/templates/tab-chats.html \
 /Users/salmatayo/myApp/platforms/android/assets/www/templates/tab-dash.html \

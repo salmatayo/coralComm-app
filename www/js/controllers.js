@@ -87,13 +87,14 @@ angular.module('starter.controllers', [])
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats, $ionicPopover) {
+  $ionicPopover.fromTemplateUrl('templates/popoverchats.html', {
+    scope: $scope,
+  }).then(function(popover) {
+    $scope.popover = popover;
+  })
   $scope.chat = Chats.get($stateParams.chatId);
 })
-$ionicPopover.fromTemplateUrl('templates/popoverchats.html', {
-  scope: $scope,
-}).then(function(popover) {
-  $scope.popover = popover;
-})
+
 
 
 .controller('FriendsCtrl', function($scope, Friends) {
