@@ -1,9 +1,10 @@
 <ion-view view-title="Create New Group">
 
-  
+
 <ion-content>
 
   <ion-list>
+    <div class="list list-inset">
     <a class="item item-icon-left" ui-sref="contactinfo">
       <i class="icon ion-person"></i>
       Name 1 ( Group 1, Group 2)
@@ -16,7 +17,7 @@
       <i class="icon ion-person"></i>
       Name 3 ( Group 1, Group 2)
     </a>
-
+</div>
   </ion-list>
 
 <ion-slide-box active-slide="contactGroupSlide">
@@ -63,11 +64,12 @@
 <div class="list list-inset">
   <label class="item item-input">
     <span class="input-label">Name</span>
-    <input type="text">
+    <input type="text" placeholder="Name">
   </label>
   <label class="item item-input">
     <span class="input-label">Picture</span>
-    <input type="password">
+    <i class="icon ion-paperclip"></i>
+    <input type="password" placeholder="Upload picture">
   </label><br>
   <button class="button button-calm">
     Save

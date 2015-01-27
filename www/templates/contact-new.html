@@ -1,32 +1,32 @@
 <ion-view view-title="Create New Contact">
-  
+
 
   <ion-content>
-    <div class="list">
-      <label class="item item-input item-floating-label">
+    <div class="list list-inset">
+      <label class="item item-input">
         <span class="input-label">Name</span>
         <input type="text" placeholder="Name">
       </label>
-      <label class="item item-input item-floating-label">
+      <label class="item item-input">
         <span class="input-label">Email</span>
         <input type="text" placeholder="Email">
       </label>
-      <label class="item item-input item-floating-label">
+      <label class="item item-input">
         <span class="input-label">Phone Number</span>
         <input type="text" placeholder="Phone">
       </label>
+        </div>
 
-    </div>
 
     <div>
-    <label class="item item-radio">
+    <label class="item item-radio list-inset">
       <div class="item"><h2>Type</h2></div>
       <ion-radio ng-model="choice" ng-value="'customer'">Customer</ion-radio>
       <ion-radio ng-model="choice" ng-value="'vendor'">Vendor</ion-radio>
     </label>
   </div>
 
-  <div class="item">
+  <div class="list-inset">
     <button class="button button-calm">
       Submit
     </button>

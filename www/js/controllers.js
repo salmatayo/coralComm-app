@@ -86,9 +86,15 @@ angular.module('starter.controllers', [])
   });
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+.controller('ChatDetailCtrl', function($scope, $stateParams, Chats, $ionicPopover) {
   $scope.chat = Chats.get($stateParams.chatId);
 })
+$ionicPopover.fromTemplateUrl('templates/popoverchats.html', {
+  scope: $scope,
+}).then(function(popover) {
+  $scope.popover = popover;
+})
+
 
 .controller('FriendsCtrl', function($scope, Friends) {
   $scope.friends = Friends.all();
